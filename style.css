@@ -4,16 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 
-    --button-color: #4CAF50;
-    --button-hover-color: #45a049;
-    --operator-button-color: #f44336;
-    --operator-button-hover-color: #e53935;
-    --control-button-color: #2196F3;
-    --control-button-hover-color: #1976D2;
+    --button-color:rgba(105, 98, 161, 0.52);
+    --button-hover-color: rgba(64, 56, 132, 0.52);
+    --operator-button-color: rgba(175, 122, 163, 1);
+    --operator-button-hover-color: rgb(147, 124, 142);
+    --control-button-color: rgba(190, 51, 51, 1);
+    --control-button-hover-color:  rgb(219, 82, 82);
     --equals-button-color: #FF9800;
     --equals-button-hover-color: #F57C00;
     --font-color: #333;
-    --primary-color: #f0f0f0;
+    --primary-color: rgba(217, 217, 217, 1);
     --secondary-color: #333;
 }
 
@@ -56,14 +56,124 @@ header{
 
 .display-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 50%;
-    background-color: #fff;
+    height: 150px;
+    width: 650px;
+    background-color: var(--primary-color);
     border: 1px solid #ccc;
-    border-radius: 50px;
+    border-radius: 30px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
+}
+
+.display-container input{
+    width: 80%;
+    height: 50px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    margin: 10px 20px;
+    border: none;
+    /* background-color: transparent; */
+    color: var(--font-color);
+}
+
+.display-container p{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    padding: 0;
+    text-align: right;
+    flex-grow: 1fr;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    margin: 20px auto;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.operator-buttons,
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.number-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button-number{
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-number:hover {
+    background-color: var(--button-hover-color);
+}
+
+.button-operator {
+    background-color: var(--operator-button-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-operator:hover {
+    background-color: var(--operator-button-hover-color);
+}
+.button-clear,
+.button-back {
+    background-color: var(--control-button-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 60%;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-clear:hover,
+.button-back:hover {
+    background-color: var(--control-button-hover-color);
+}
+.button-back{
+    background-color: black;
+    color: white;
 }
