@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-    <script src="calculator.js"></script>
 
     <title>Calculator</title>
 
@@ -26,7 +25,7 @@
         <div class = "container">
 
             <div class = "display-container">
-                <input type="text" id="display" disabled>
+                <input type="text" id="display" class="display" readonly>
                 <div class = "memory-display">
                     <!-- <p id="memory-display">memory texttttt</p> -->
                 </div>
@@ -59,8 +58,13 @@
                 <div class = "control-buttons">
                     <button class="button-clear" id="clear">AC</button>
                     <button class="button-back" id="backspace">clear</button>
-                </div>
-               
+                </div> 
+            </div>         
                 
         </div>
     </main>
+
+    <script src="calculator.js"></script>
+
+    </body>
+    </html>
